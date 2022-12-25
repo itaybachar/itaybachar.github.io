@@ -16,5 +16,3 @@ if (!isMobile) {
         background.style.transform = `translate3d(${mouseX}%, ${mouseY}%, 0)`;
     });
 }
-
-// document.onload = startBackground();

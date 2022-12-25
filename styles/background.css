@@ -11,6 +11,11 @@
     background-image: url('../lofi-terrain/res/background-cont2-stars.jpg');
     animation: moveDown 90s infinite linear;
     animation-play-state: paused;
+    background-size: contain;
+
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
 }
 
 .background.moving {
