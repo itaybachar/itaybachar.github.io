@@ -11,6 +11,37 @@
     animation-play-state: paused;
 }
 
+.background.reverse {
+    animation: reversePan 2.5s cubic-bezier(0.4, 0.2, 0.1, 0);
+    animation-play-state: paused;
+    background-position-y: 100vh;
+
+}
+
+.background.moving {
+    animation-play-state: running;
+}
+
+@keyframes panning {
+    0% {
+        background-position-y: 100%;
+    }
+
+    100% {
+        background-position-y: 100vh;
+    }
+}
+
+@keyframes reversePan {
+    100% {
+        background-position-y: 100%;
+    }
+
+    0% {
+        background-position-y: 100vh;
+    }
+}
+
 .title-name {
     z-index: 10;
     position: relative;
@@ -72,4 +103,10 @@
 .start-text {
     color: red;
     text-shadow: 0 0 80px red, 0 0 30px FireBrick, 0 0 6px DarkRed;
+}
+
+.loading-screen.hide {
+    transition: 2.5s;
+    transition-timing-function: cubic-bezier(0.4, 0.2, 0.1, 0);
+    transform: translateY(-100vh);
 }

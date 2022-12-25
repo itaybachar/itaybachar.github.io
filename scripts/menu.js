@@ -96,3 +96,12 @@
     });
 
 }).call(this);
+
+
+function startButton()
+{
+    console.log("hi")
+    document.getElementById("background").classList.add("moving");
+    document.getElementById("loading-screen").classList.add("hide");
+
+}
