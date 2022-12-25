@@ -1,0 +1,38 @@
+.title-name {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10%);
+    height: 0;
+
+    width: max-content;
+    min-width: fit-content;
+
+    font: 20vw /1vh Gochi Hand;
+    font-size: clamp(1rem, 8.333vw, 10.5rem);
+    padding: 2.5vw;
+
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 80px red, 0 0 30px FireBrick, 0 0 6px DarkRed;
+    transition: 0.5s;
+}
+
+.title-name.small {
+    left: 0;
+    transition: 0.5s;
+    transform: translateX(0%);
+    font-size: clamp(0.5rem, 8.333vw, 2.5rem);
+    padding: 0.7rem;
+}
+
+#error {
+    color: #fff;
+    text-shadow: 0 0 80px #ffffff, 0 0 30px #008000, 0 0 6px #0000ff;
+}
+
+.title-name p {
+    margin: 0;
+    padding: inherit
+}

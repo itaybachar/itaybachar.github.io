@@ -1,0 +1,12 @@
+.background {
+    z-index: -1;
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 150%;
+    height: 150%;
+    object-fit: cover;
+    background-image: url('../lofi-terrain/res/background-cont2-stars.jpg');
+    animation: panning 100s infinite linear;
+    animation-play-state: paused;
+}

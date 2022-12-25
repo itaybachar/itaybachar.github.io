@@ -1,0 +1,53 @@
+.start-container {
+    z-index: 10;
+    position: absolute;
+    border-style: double;
+    border-radius: 2vw;
+    border-width: 1vw;
+
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    width: max-content;
+
+    box-shadow: 0 0 20px darkred, 0 0 50px #0000ff, 0 0 55px DarkRed;
+    border-color: darkred;
+
+    font: 20vw /1vh Gochi Hand;
+    font-size: clamp(1rem, 8.333vw, 4.5rem);
+    padding: 2.5vw;
+
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 80px rgb(0, 116, 8), 0 0 30px FireBrick, 0 0 6px DarkRed;
+    transition: 0.5s;
+}
+
+.start-container:hover {
+    border-color: rebeccapurple;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.start-container.hide {
+    opacity: 0%;
+    transition: 0.5s;
+    visibility: hidden;
+    /* display: none; */
+}
+
+.start-container:hover .start-text {
+    transition: 0.5s;
+    color: antiquewhite !important;
+}
+
+.start-container .start-text {
+    color: red;
+    text-shadow: 0 0 80px red, 0 0 30px FireBrick, 0 0 6px DarkRed;
+}
+
+.start-container p {
+    margin: 0;
+    padding: inherit
+}
