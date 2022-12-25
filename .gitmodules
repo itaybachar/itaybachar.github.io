@@ -1,0 +1,3 @@
+[submodule "lofi-terrain"]
+	path = lofi-terrain
+	url = https://github.com/itaybachar/lofi-terrain.git
