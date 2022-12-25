@@ -24,7 +24,7 @@
 
         t.prototype.css = function ()
         {
-            var e = this.selector(); var t = this._settings; var n = "text-shadow: " + t.glow.toString() + ";"; var r = "color: " + t.color + ";" + n; var i = "color: " + t.color + "; opacity: 0.3;"; var s = ""; s += e + " .novacancy.on { " + r + " }" + "\n"; s += e + " .novacancy.off { " + i + " }" + "\n"; return s
+            var e = this.selector(); var t = this._settings; var n = "text-shadow: " + t.glow.toString() + ";"; var r = "color: " + t.color + ";" + n; var i = "color: " + t.color + "; opacity: 0.5;"; var s = ""; s += e + " .novacancy.on { " + r + " }" + "\n"; s += e + " .novacancy.off { " + i + " }" + "\n"; return s
         };
         t.prototype.rand = function (e, t)
         {
