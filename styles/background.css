@@ -5,11 +5,9 @@
     left: -50vw;
     bottom: -50vh;
     right: -50vw;
-    /* width: 150%;
-    height: 150%; */
     object-fit: cover;
     background-image: url('../lofi-terrain/res/background-cont2-stars.jpg');
-    animation: moveDown 90s infinite linear;
+    animation: moveDown 100s infinite linear;
     animation-play-state: paused;
     background-size: contain;
 
@@ -24,10 +22,19 @@
 
 @keyframes moveDown {
     0% {
-        background-position: 0vh 0vh;
+        background-position-y: 0vh;
     }
 
     100% {
-        background-position: 0vw 100vh;
+        background-position-y: 100vh;
     }
+}
+
+canvas {
+    z-index: 5;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0;
 }

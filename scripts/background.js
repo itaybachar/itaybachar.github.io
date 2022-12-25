@@ -14,5 +14,10 @@ if (!isMobile) {
         const mouseX = movePower * (e.pageX - windowWidth / 2) / windowWidth / 2;
         const mouseY = movePower * (e.pageY - windowHeight / 2) / windowHeight / 2;
         background.style.transform = `translate3d(${mouseX}%, ${mouseY}%, 0)`;
+
+        if(canvas)
+        {
+            canvas.style.transform = `translate3d(${0.3*mouseX}%, ${0.5*mouseY}%, 0)`;
+        }
     });
 }
