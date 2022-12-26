@@ -10,7 +10,7 @@
     -ms-user-select: none;
     user-select: none;
 
-    font: 5vw /1vh Gochi Hand;
+    font-family: Gochi Hand;
     font-size: clamp(0.2rem, 5.333vw, 3rem);
 
     text-align: center;
@@ -19,7 +19,7 @@
 
     right: 0%;
     margin-right: calc(1.25*clamp(0.2rem, 5.333vw, 3rem));
-    transform: 0.75s;
+    transition: 2s;
 
     height: clamp(0.2rem, 5.333vw, 3rem);
 }
@@ -43,7 +43,7 @@
     position: absolute;
     top: 0;
     right: calc(-1*clamp(0.2rem, 5.333vw, 3rem));
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
     height: calc(0.75*clamp(0.2rem, 5.333vw, 3rem));
     width: calc(0.75*clamp(0.2rem, 5.333vw, 3rem));
     border-radius: 5px;
@@ -64,6 +64,7 @@
 .setting-option .checkmark {
     position: absolute;
     right: calc(-1*clamp(0.2rem, 5.333vw, 3rem));
+    transform: translateY(-50%);
     box-shadow: none;
     text-shadow: none;
     color: transparent;
@@ -75,4 +76,11 @@
     color: darkred;
     opacity: 0.85;
     text-shadow: inherit;
+}
+
+.setting-option.hide {
+    z-index: -2;
+    /* display: none; */
+    opacity: 0;
+    /* cursor: pointer !important; */
 }
