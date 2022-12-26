@@ -1,5 +1,5 @@
 .title-name {
-    z-index: 10;
+    z-index: 100;
     position: absolute;
     top: 0;
     left: 50%;
@@ -17,6 +17,11 @@
     text-transform: uppercase;
     text-shadow: 0 0 80px red, 0 0 30px FireBrick, 0 0 6px DarkRed;
     transition: 0.5s;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .title-name.small {
