@@ -14,7 +14,6 @@
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -o-background-size: contain;
-    viewport-fit: cover;
 }
 
 .background.moving {
