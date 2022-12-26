@@ -22,6 +22,11 @@
     text-transform: uppercase;
     text-shadow: 0 0 80px rgb(0, 116, 8), 0 0 30px FireBrick, 0 0 6px DarkRed;
     transition: 0.5s;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .start-container:hover {

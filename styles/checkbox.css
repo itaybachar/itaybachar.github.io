@@ -1,11 +1,10 @@
 .setting-option {
     z-index: 100;
     display: block;
-    position: absolute;
-    /* padding-left: 35px; */
-    /* margin-bottom: 12px; */
+    position: relative;
+
     cursor: pointer;
-    font-size: 22px;
+
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -19,10 +18,10 @@
     text-shadow: 0 0 80px rgb(0, 116, 8), 0 0 30px FireBrick, 0 0 6px DarkRed;
 
     right: 0%;
-    top: 50%;
-
     margin-right: calc(1.25*clamp(0.2rem, 5.333vw, 3rem));
     transform: 0.75s;
+
+    height: clamp(0.2rem, 5.333vw, 3rem);
 }
 
 
@@ -74,6 +73,6 @@
 .setting-option input:checked~.checkmark {
     /* background-color: #2196F3; */
     color: darkred;
-    opacity: 0.75;
+    opacity: 0.85;
     text-shadow: inherit;
 }
