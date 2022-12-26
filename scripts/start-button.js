@@ -21,6 +21,7 @@ function expandTerrain()
         clearInterval(terrainStartAnimator);
         terrainStartAnimator = undefined;
         document.getElementById("flying-input").disabled = false;
+        document.getElementById("background").classList.remove("moving");
     }
     else
     {

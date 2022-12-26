@@ -27,7 +27,7 @@
     <div id="background" class="background moving"></div>
 
     <!-- Name Title -->
-    <div id="title-name" class="title-name">
+    <div id="title-name" onclick="resetToStartScreen()" class="title-name">
         <p id="error">Itay</p>
         <p id="code">Bachar</p>
     </div>
@@ -45,15 +45,15 @@
     <div class="settings">
         <label id='sound-setting' class="setting-option">Sound
             <input onkeydown="return false" type="checkbox">
-            <span class="checkmark">&check;</span>
             <span class="box-outline">
             </span>
+            <span class="checkmark">&check;</span>
         </label>
         <label id='flying-setting' class="setting-option hide">Flying
             <input id="flying-input" onclick="toggleFlying(this)" onkeydown="return false" type="checkbox">
-            <span class="checkmark">&check;</span>
             <span class="box-outline">
             </span>
+            <span class="checkmark">&check;</span>
         </label>
     </div>
 </body>

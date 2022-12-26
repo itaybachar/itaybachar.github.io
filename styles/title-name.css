@@ -30,6 +30,7 @@
     transform: translateX(0%);
     font-size: clamp(0.5rem, 8.333vw, 2.5rem);
     padding: 0.7rem;
+    cursor: pointer;
 }
 
 #error {
