@@ -1,0 +1,79 @@
+.setting-option {
+    z-index: 100;
+    display: block;
+    position: absolute;
+    /* padding-left: 35px; */
+    /* margin-bottom: 12px; */
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    font: 5vw /1vh Gochi Hand;
+    font-size: clamp(0.2rem, 5.333vw, 3rem);
+
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 80px rgb(0, 116, 8), 0 0 30px FireBrick, 0 0 6px DarkRed;
+
+    right: 0%;
+    top: 50%;
+
+    margin-right: calc(1.25*clamp(0.2rem, 5.333vw, 3rem));
+    transform: 0.75s;
+}
+
+
+.setting-option input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.setting-option.glow {
+    color: darkred;
+    opacity: 0.75;
+    transition: 0.75s;
+}
+
+.box-outline {
+    position: absolute;
+    top: 0;
+    right: calc(-1*clamp(0.2rem, 5.333vw, 3rem));
+    transform: translateY(-50%);
+    height: calc(0.75*clamp(0.2rem, 5.333vw, 3rem));
+    width: calc(0.75*clamp(0.2rem, 5.333vw, 3rem));
+    border-radius: 5px;
+
+    box-shadow: 0 0 20px darkred, 0 0 50px #0000ff, 0 0 55px DarkRed;
+    border-color: darkred;
+    border-width: 2px;
+    border-style: solid;
+    opacity: 0.75;
+}
+
+/* On mouse-over, add a grey background color */
+.setting-option:hover .checkmark {
+    color: darkred;
+    opacity: 0.5;
+}
+
+.setting-option .checkmark {
+    position: absolute;
+    right: calc(-1*clamp(0.2rem, 5.333vw, 3rem));
+    box-shadow: none;
+    text-shadow: none;
+    color: transparent;
+    height: 100%;
+}
+
+.setting-option input:checked~.checkmark {
+    /* background-color: #2196F3; */
+    color: darkred;
+    opacity: 0.75;
+    text-shadow: inherit;
+}
