@@ -26,6 +26,11 @@ function resetToStartScreen()
         //uncheck flying
         document.getElementById("flying-input").checked = false;
 
+        //Hide nav bar
+        document.getElementById("navbar").classList.add("off-screen");
+        // document.getElementById("navbar").classList.add("hide");
+
+
         //Check if its animating the opening
         if (terrainStartAnimator)
         {

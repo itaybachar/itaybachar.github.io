@@ -1,4 +1,5 @@
 .setting-option {
+    --size-choice: clamp(0.5rem, min(5.333vw, 5.333vh), 2rem);
     z-index: 100;
     display: block;
     position: relative;
@@ -11,17 +12,17 @@
     user-select: none;
 
     font-family: Gochi Hand;
-    font-size: clamp(0.2rem, 5.333vw, 3rem);
+    font-size: var(--size-choice);
 
     text-align: center;
     text-transform: uppercase;
     text-shadow: 0 0 80px rgb(0, 116, 8), 0 0 30px FireBrick, 0 0 6px DarkRed;
 
     right: 0%;
-    margin-right: calc(1.25*clamp(0.2rem, 5.333vw, 3rem));
+    margin-right: calc(1.25*var(--size-choice));
     transition: 2s;
 
-    height: clamp(0.2rem, 5.333vw, 3rem);
+    height: var(--size-choice);
 
     color: rgba(255, 0, 0, 0.5);
 }
@@ -44,10 +45,10 @@
 .box-outline {
     position: absolute;
     top: 0;
-    right: calc(-1*clamp(0.2rem, 5.333vw, 3rem));
+    right: calc(-1*var(--size-choice));
     /* transform: translateY(-50%); */
-    height: calc(0.75*clamp(0.2rem, 5.333vw, 3rem));
-    width: calc(0.75*clamp(0.2rem, 5.333vw, 3rem));
+    height: calc(0.75*var(--size-choice));
+    width: calc(0.75*var(--size-choice));
     border-radius: 5px;
 
     box-shadow: 0 0 20px darkred, 0 0 50px #0000ff, 0 0 55px DarkRed;
@@ -65,18 +66,19 @@
 
 .setting-option .checkmark {
     position: absolute;
-    right: calc(-1*clamp(0.2rem, 5.333vw, 3rem));
-    transform: translateY(-50%);
+    right: calc(-1*var(--size-choice));
+    /* transform: translateY(-50%); */
     box-shadow: none;
     text-shadow: none;
     color: transparent;
-    height: 100%;
+    width: calc(0.75*var(--size-choice));
+    height: calc(0.75*var(--size-choice));
 }
 
 .setting-option input:checked~.checkmark {
     /* background-color: #2196F3; */
     color: red;
-    opacity: 0.9;
+    opacity: 0.85;
     text-shadow: inherit;
 }
 

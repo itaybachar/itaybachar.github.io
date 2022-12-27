@@ -46,8 +46,8 @@
 
     <!-- Name Title -->
     <div id="title-name" onclick="resetToStartScreen()" class="title-name">
-        <p id="error">Itay</p>
-        <p id="code">Bachar</p>
+        <p class="error">Itay</p>
+        <p class="code">Bachar</p>
     </div>
 
     <!-- Start Button -->
@@ -61,20 +61,36 @@
 
     <!-- Settings -->
     <div class="settings">
-        <label id='sound-setting' class="setting-option">Sound
+        <!-- <label id='sound-setting' class="setting-option">Sound
             <input onkeydown="return false" type="checkbox">
             <span class="box-outline">
             </span>
             <span class="checkmark">&check;</span>
-        </label>
+        </label> -->
         <label id='flying-setting' class="setting-option hide">Flying
             <input id="flying-input" onclick="toggleFlying(this)" onkeydown="return false" type="checkbox">
             <span class="box-outline">
             </span>
-            <span class="checkmark">&check;</span>
+            <span class="checkmark">X</span>
         </label>
-        <p id="debug" style="color: white;left:50%">Hello Everyone</p>
     </div>
+
+    <!-- Sections -->
+    <!-- <div class="tile-container">
+        <div id='test' class="tile front">
+            <p>Hello</p>
+        </div>
+    </div> -->
+
+    <!-- Menu -->
+    <div id="navbar" class="menu-container hide">
+        <ul>
+            <li class="nav1">About Me</li>
+            <li class="nav2">Projects</li>
+            <li class="nav1">Get In Touch</li>
+        </ul>
+    </div>
+
 </body>
 
 </html>

@@ -33,12 +33,17 @@
     cursor: pointer;
 }
 
-#error {
+.title-name.small:hover {
+    scale: 1.2;
+    transition: 1s;
+}
+
+.error {
     color: #fff;
     text-shadow: 0 0 80px #ffffff, 0 0 30px #008000, 0 0 6px #0000ff;
 }
 
 .title-name p {
     margin: 0;
-    padding: inherit
+    padding: inherit;
 }

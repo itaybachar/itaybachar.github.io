@@ -77,16 +77,39 @@
     })(jQuery);
     $(function ()
     {
-        $('#error').novacancy({
-            'reblinkProbability': 0.1,
+        $('.error').novacancy({
+            'reblinkProbability': 0.2,
             'blinkMin': 0.2,
-            'blinkMax': 0.5,
+            'blinkMax': 0.7,
             'loopMin': 8,
             'loopMax': 10,
             'color': '#ffffff',
             'glow': ['0 0 80px #ffffff', '0 0 30px #008000', '0 0 6px #0000ff']
         });
-        return $('#code').novacancy({
+
+        $('.nav1').novacancy({
+            'reblinkProbability': 0.2,
+            'loopMin': 8,
+            'blinkMin': 0.2,
+            'blinkMax': 0.9,
+            'blink': 2,
+            'off': 1,
+            'color': '#ffffff',
+            'glow': ['0 0 80px #ffffff', '0 0 30px #008000', '0 0 6px #0000ff']
+        });
+
+        $('.nav2').novacancy({
+            'reblinkProbability': 0.2,
+            'loopMin': 8,
+            'blinkMin': 0.2,
+            'blinkMax': 0.9,
+            'blink': 2,
+            'off': 1,
+            'color': '#fddddd',
+            'glow': ['0 0 80px #ffffff', '0 0 30px #008000', '0 0 6px #0000ff']
+        });
+
+        return $('.code').novacancy({
             'blink': 2,
             'off': 1,
             'color': 'Red',

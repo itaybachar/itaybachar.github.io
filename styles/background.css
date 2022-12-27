@@ -2,9 +2,9 @@
     z-index: -1;
     position: fixed;
 
-    top: -5vh;
+    top: -10vh;
     left: -50vw;
-    bottom: -50vh;
+    bottom: -10vh;
     right: -50vw;
     /* object-fit: cover; */
     background-image: url('../lofi-terrain/res/background-cont2-stars.jpg');
@@ -25,11 +25,11 @@
 
 @keyframes moveDown {
     0% {
-        background-position-y: -5vh;
+        background-position-y: -10vh;
     }
 
     100% {
-        background-position-y: 150vh;
+        background-position-y: 110vh;
     }
 }
 

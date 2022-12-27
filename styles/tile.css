@@ -1,0 +1,46 @@
+.tile-container {
+    z-index: 10;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    -webkit-perspective: 240px;
+    perspective: 100vh;
+}
+
+.tile {
+    position: relative;
+    width: 50vw;
+    height: 50vh;
+    left: 25%;
+    top: 25vh;
+    background-color: green;
+    /* animation: coming 3s linear infinite; */
+
+    /* transform: translate3D(-710px, 0, -10in) rotateY(85deg); */
+    animation-play-state: paused;
+}
+
+.tile.front {
+    transform: translate3D(0, 0, 0) rotateY(0);
+    transition: 0.5s;
+    /* anima */
+}
+
+.tile.moving {
+    animation-play-state: running;
+}
+
+@keyframes coming {
+    0% {
+        transform: translate3D(-710px, 0, -10in) rotateY(85deg);
+    }
+
+    100% {
+        transform: translate3D(-710px, 0, 5in) rotateY(85deg);
+    }
+}
