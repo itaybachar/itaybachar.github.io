@@ -6,7 +6,7 @@
     left: -50vw;
     bottom: -50vh;
     right: -50vw;
-    object-fit: cover;
+    /* object-fit: cover; */
     background-image: url('../lofi-terrain/res/background-cont2-stars.jpg');
     animation: moveDown 100s infinite linear;
     animation-play-state: paused;
