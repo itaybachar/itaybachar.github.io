@@ -1,3 +1,12 @@
+:root {
+    /* Base font size */
+    font-size: 10px;
+
+    /* Set neon color */
+    --neon-border-color: rgb(49, 0, 146);
+    --neon-text-color: #ffffff;
+}
+
 .tile-container {
     z-index: 10;
     position: absolute;
@@ -8,39 +17,116 @@
     width: 100vw;
     height: 100vh;
 
-    -webkit-perspective: 240px;
+    -webkit-perspective: 100vh;
     perspective: 100vh;
 }
 
 .tile {
     position: relative;
+    overflow: hidden;
     width: 50vw;
     height: 50vh;
     left: 25%;
     top: 25vh;
-    background-color: green;
-    /* animation: coming 3s linear infinite; */
+    background-color: #0f081f;
+    color: white;
 
-    /* transform: translate3D(-710px, 0, -10in) rotateY(85deg); */
-    animation-play-state: paused;
+    /* Border */
+    border: min(0.8vh, 0.8vw) solid #fff;
+    border-radius: 5%;
+    animation: flicker 1.5s infinite alternate, floating 5s ease-in-out infinite;
+
+    /* Set font Family */
+    font-family: Balsamiq Sans;
+    /* animation: ; */
 }
 
-.tile.front {
-    transform: translate3D(0, 0, 0) rotateY(0);
-    transition: 0.5s;
-    /* anima */
+.tile:hover {
+    animation-play-state: running, paused;
 }
 
-.tile.moving {
-    animation-play-state: running;
+.t-heading {
+    position: relative;
+    top: 10px;
+    left: 10%;
+
+    font-size: clamp(1rem, 8.333vw, 4.5rem);
+    font-weight: bold;
+
+    animation: none;
 }
 
-@keyframes coming {
-    0% {
-        transform: translate3D(-710px, 0, -10in) rotateY(85deg);
+.t-back {
+    position: relative;
+    top: 0.5%;
+    left: 2%;
+
+    font-size: calc(0.8*clamp(1rem, 8.333vw, 4.5rem));
+    text-shadow: 0 0 80px #ffffff, 0 0 30px #008000, 0 0 6px #0000ff;
+}
+
+.t-body {
+    position: relative;
+    margin-top: 5%;
+    top: 0;
+    left: 10%;
+    width: 75%;
+
+    font-size: calc(0.5*clamp(1rem, 8.333vw, 4.5rem));
+
+}
+
+.t-nav {
+    position: absolute;
+    z-index: 100;
+    right: 0;
+
+    top: 50%;
+    translate: 0 -50%;
+    /* left: 50%; */
+    font-size: calc(0.7*clamp(1rem, 8.333vw, 4.5rem));
+
+}
+
+.t-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.t-nav li {
+    position: relative;
+    writing-mode: vertical-rl;
+    padding: 33% 0;
+    cursor: pointer;
+}
+
+
+/* neon flicker */
+@keyframes flicker {
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+
+
+        box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 2rem var(--neon-border-color),
+            inset 0 0 2rem var(--neon-border-color),
+            0 0 4rem var(--neon-border-color),
+            inset 0 0 4rem var(--neon-border-color);
     }
 
-    100% {
-        transform: translate3D(-710px, 0, 5in) rotateY(85deg);
+    20%,
+    24%,
+    55% {
+        box-shadow: none;
     }
 }

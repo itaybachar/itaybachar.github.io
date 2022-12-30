@@ -6,9 +6,14 @@ function startButton()
     document.getElementById("start-container").classList.add("hide");
     document.getElementById("flying-setting").classList.remove("hide");
     document.getElementById("flying-input").disabled = true;
+    document.getElementById("flying-input").checked = true;
+
+    document.getElementById("flying-input").disabled = true;
+
     initCanvas();
 
     height = 0;
+    width = reachWidth;
     terrainStartAnimator = setInterval(expandTerrain, 50);
 
     // Load Nav
@@ -19,18 +24,22 @@ function startButton()
 function expandTerrain()
 {
     height++;
+    flyingDelta = 0.01;
+
 
     if (height >= reachHeight)
     {
+        height = reachHeight;
         clearInterval(terrainStartAnimator);
         terrainStartAnimator = undefined;
         document.getElementById("flying-input").disabled = false;
-        document.getElementById("background").classList.remove("moving");
+        document.getElementById("background").classList.add("moving");
+        startMovement();
     }
     else
     {
-        flying += flyingDelta;
         drawTerrain();
+        flying += flyingDelta;
     }
 }
 
@@ -48,7 +57,7 @@ function fastStart()
     document.getElementById("background").classList.remove("moving");
 }
 
-// document.addEventListener('DOMContentLoaded', function ()
-// {
-//     fastStart();
-// }, false);
+document.addEventListener('DOMContentLoaded', function ()
+{
+    // fastStart();
+}, false);

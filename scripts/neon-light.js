@@ -104,7 +104,7 @@
             'blinkMin': 0.2,
             'blinkMax': 0.9,
             'blink': 2,
-            'off': 1,
+            'off': 0,
             'color': '#fddddd',
             'glow': ['0 0 80px #ffffff', '0 0 30px #008000', '0 0 6px #0000ff']
         });
