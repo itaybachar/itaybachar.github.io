@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.button-panel {
+    display: flex;
+    gap:6vw;
+}
+
+.monitor {
+    width: min(50vw,50vh);
+    height: min(50vw,50vh);
+    border-radius:10px;
+    background-size: cover;
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Added shadow */
+}
+
+.sandwich {
+    width: min(50vw,50vh);
+    height: min(50vw,50vh);
+border-radius:10px;
+    background-image: url('cheeser.avif');
+    background-size: cover;
+    animation: float 3s ease-in-out infinite;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Added shadow */
+}
+
+.album {
+    width: min(50vw,50vh);
+    height: min(50vw,50vh);
+    border-radius:10px;
+    background-size: cover;
+    animation: float 3s ease-in-out infinite;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Added shadow */
+}
+
+.song-cover {
+    width: min(50vw,50vh);
+    height: min(50vw,50vh);
+border-radius:10px;
+    background-size: cover;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Added shadow */
+    display: inherit;
+    object-fit: cover;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.hide {
+    display: none;
+}
+
+button {
+    position: relative;
+    font-weight: 600;
+    height: 40px;
+    padding: 12px 20px;
+    outline: none;
+    border: 1px solid black;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 10vw;
+    direction: rtl;
+  }
+  
+  button:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 7px;
+    left: 7px;
+    height: 100%;
+    background-color: rgb(201, 184, 246);
+    z-index: -1;
+    transition: all 0.35s;
+    border-radius: inherit;
+  }
+  
+  button:hover:after {
+    top: 0px;
+    left: 0px;
+  }
+
+  button:active {
+    background-color: rgb(156, 142, 194);
+  }
+
+  /* body {
+    margin: 0;
+    background: #020202;
+    cursor: crosshair;
+  } */
+  canvas{position:absolute; z-index: -2;}
+  /* h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: "Source Sans Pro";
+    font-size: 5em;
+    font-weight: 900;
+    -webkit-user-select: none;
+    user-select: none;
+  } */
