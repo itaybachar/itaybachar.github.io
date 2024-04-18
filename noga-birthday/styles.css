@@ -125,3 +125,26 @@ button {
     -webkit-user-select: none;
     user-select: none;
   } */
+
+  
+@media only screen and (max-width: 768px) {
+    button{
+        width: 22vw;
+    }
+
+    .sandwich {
+        width: 90vw;
+        height: 90vw;
+    }
+
+    .album {
+        width: 90vw;
+        height: 90vw;
+    }
+
+    .song-cover {
+        width: 90vw;
+        height: 90vw;
+    }
+
+}
