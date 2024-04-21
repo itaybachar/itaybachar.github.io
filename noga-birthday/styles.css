@@ -39,6 +39,7 @@ border-radius:10px;
     height: min(50vw,50vh);
     border-radius:10px;
     background-size: cover;
+    object-fit: cover;
     animation: float 3s ease-in-out infinite;
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Added shadow */
