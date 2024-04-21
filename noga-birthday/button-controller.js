@@ -30,10 +30,20 @@ function shuffle() {
       }
       nextSibling.style.display = null;
     }
+    if(visibleChild.play)
+      visibleChild.pause()
+
+    if(nextSibling.play)
+      nextSibling.play()
+
     visibleChild = nextSibling;
   } else {
-    visibleChild = photos.firstElementChild
+    if(visibleChild == null)
+      visibleChild = photos.firstElementChild
     visibleChild.style.display = null
+
+    if(visibleChild.play)
+      visibleChild.play()
   }
 
   cheese.classList.add('hide')

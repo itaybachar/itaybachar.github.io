@@ -37,6 +37,7 @@ function populateImageAndVideo() {
       vid.classList.add("album")
       vid.src = `photos/bday/${media}`;
       vid.autoplay = false;
+      vid.controls = true;
       vid.style.display = "none"
       album.appendChild(vid)
     }
