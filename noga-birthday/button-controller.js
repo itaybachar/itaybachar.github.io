@@ -7,15 +7,12 @@ function cheeser() {
   cheese.classList.remove('hide');
   songCover.classList.add('hide');
   photos.classList.add('hide');
-  songCover.pause()
 }
 
 function song() {
   cheese.classList.add('hide')
   songCover.classList.remove('hide');
   photos.classList.add('hide');
-
-  songCover.play()
 }
 
 let visibleChild = null;
@@ -50,10 +47,5 @@ function shuffle() {
   songCover.classList.add('hide');
   photos.classList.remove('hide');
 
-  songCover.pause()
   albumIndex++
 }
-
-// photos.addEventListener('click', function() {
-//   shuffle()
-// });
